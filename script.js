@@ -45,5 +45,4 @@ sunMoonBtn.addEventListener('click', function() {
     const sun = document.querySelector('.sun');
 
     sun.classList.toggle('show');
-})
-
+});
