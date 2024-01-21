@@ -19,7 +19,7 @@ body {
     align-items: center;
     background: url(assets/cloud.png) no-repeat;
     background-position: top center;
-    background-size: contain;
+    background-size: cover;
     height: 100vh;
     overflow-x: hidden;
 
