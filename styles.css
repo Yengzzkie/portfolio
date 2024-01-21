@@ -13,16 +13,18 @@ body {
 
 
 .hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(assets/intro-bg.jpg) no-repeat;
+    background: url(assets/cloud.png) no-repeat;
     background-position: top center;
     background-size: cover;
     height: 100vh;
-    margin-bottom: 100px;
+    overflow-x: hidden;
 
     .content {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -36,12 +38,24 @@ body {
         }
 
         h2 {
+            position: relative;
             font-family: 'Orbitron', sans-serif;
             color: rgb(206, 54, 43);
             text-transform: uppercase;
+            text-shadow: -1px 2px 4px #ccc;
             letter-spacing: 1px;
             font-size: 3rem;
             margin: 10px;
+        }
+
+        h2::before {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: #fff;
+            position: absolute;
+            bottom: 0;
+            margin-top: 5px;
         }
 
         h3 {
@@ -53,9 +67,9 @@ body {
         }
 
         button {
-            background: transparent;
+            background: #ffffff4f;
             border: 1px solid #fff;
-            color: #fff;
+            color: #2c2929d5;
             font-weight: bold;
             font-size: 1.5rem;
             padding: 20px 30px;
@@ -68,15 +82,67 @@ body {
             color: black;
         }
     }
+
+    /* MOON */
+    .moon {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        box-shadow: 0px 0px 50px #ffffffc7;
+        border-radius: 50%;
+        right: 20%;
+        top: 20%;
+    }
+
+    /* SUN */
+    .sun {
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: #fdf03a;
+        box-shadow: 0px 0px 50px #ffffffc7;
+        border-radius: 50%;
+        right: -100%;
+        top: 20%;
+        transition: .5s ease;
+    }
+
+    .show.sun {
+        right: 20%;
+    }
+
+    button {
+        z-index: 9;
+    }
+
+      
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite;
+    }
+      
 }
 
 
-
 .about {
-    background: linear-gradient(to bottom, black, #272727);
+    background: linear-gradient(to bottom, #141414d6, #272727);
     display: flex;
     width: 100vw;
     max-width: 100%;
+    padding-top: 100px;
 
     .container {
         position: relative;
@@ -199,3 +265,22 @@ body {
         }
     }
 }
+
+
+
+/* ANIMATIONS */
+
+@keyframes twinkle {
+    0% {
+      opacity: 0.8;
+    }
+    25% {
+      opacity: 0.4;
+    }
+    50% {
+    opacity: 0.2;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
