@@ -43,7 +43,13 @@ const sunMoonBtn = document.querySelector(".toggle-theme")
 
 sunMoonBtn.addEventListener('click', function() {
     const sun = document.querySelector('.sun');
+    const about = document.querySelector('.about')
+    const contact = document.querySelector(".contact");
+    const projects = document.querySelector(".projects");
 
     sun.classList.toggle('show');
+    about.classList.toggle("light");
+    contact.classList.toggle("light");
+    projects.classList.toggle("light");
 })
 

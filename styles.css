@@ -10,6 +10,10 @@ body {
     background: black;
     color: white;
 }
+/* use #50cde9 for light background */
+body.light {
+    background: #50cde9;
+}
 
 
 .hero {
@@ -131,8 +135,13 @@ body {
       background-color: white;
       border-radius: 50%;
       animation: twinkle 2s infinite;
-    }
-      
+    }  
+}
+
+.hero.light {
+    background: url(assets/cloud.png), linear-gradient(to bottom, #50cde9, #fff);
+    background-position: top center;
+    background-size: cover;
 }
 
 
@@ -179,6 +188,9 @@ body {
     }
 }
 
+.about.light {
+    background: linear-gradient(to bottom, #fff, #50cde9);
+}
 
 .contact {
     background: #272727;
@@ -219,6 +231,10 @@ body {
             width: 80px;
         }
     }
+}
+
+.contact.light {
+    background: #50cde9;
 }
 
 
@@ -263,6 +279,10 @@ body {
             padding: 50px;
         }
     }
+}
+
+.projects.light {
+    background: linear-gradient(to bottom, #50cde9, #fff);
 }
 
 
