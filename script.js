@@ -42,16 +42,32 @@ document.addEventListener('DOMContentLoaded', function () {
 const sunMoonBtn = document.querySelector(".toggle-theme")
 
 sunMoonBtn.addEventListener('click', function() {
-    const sun = document.querySelector('.sun');
+    const moon = document.querySelector('.moon');
     const hero = document.querySelector('.hero');
     const about = document.querySelector('.about');
     const contact = document.querySelector(".contact");
     const projects = document.querySelector(".projects");
 
-    sun.classList.toggle('show');
+    moon.classList.toggle('sun');
     hero.classList.toggle("light");
     about.classList.toggle("light");
     contact.classList.toggle("light");
     projects.classList.toggle("light");
 })
+
+
+// PARALLAX EFFECT FOR MOON AND SUN
+document.addEventListener("DOMContentLoaded", function () {
+  const moon = document.querySelector(".moon");
+
+  const parallaxSensitivity = 0.5;
+
+  window.addEventListener("scroll", function () {
+    const scrolledHeight = window.scrollY;
+    const parallaxValue = scrolledHeight * parallaxSensitivity;
+
+    moon.style.transform = `translateY(${parallaxValue}px)`;
+  });
+});
+
 
