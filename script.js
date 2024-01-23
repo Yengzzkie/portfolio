@@ -57,17 +57,17 @@ sunMoonBtn.addEventListener('click', function() {
 
 
 // PARALLAX EFFECT FOR MOON AND SUN
-document.addEventListener("DOMContentLoaded", function () {
-  const moon = document.querySelector(".moon");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const moon = document.querySelector(".moon");
 
-  const parallaxSensitivity = 0.5;
+//   const parallaxSensitivity = 0.5;
 
-  window.addEventListener("scroll", function () {
-    const scrolledHeight = window.scrollY;
-    const parallaxValue = scrolledHeight * parallaxSensitivity;
+//   window.addEventListener("scroll", function () {
+//     const scrolledHeight = window.scrollY;
+//     const parallaxValue = scrolledHeight * parallaxSensitivity;
 
-    moon.style.transform = `translateY(${parallaxValue}px)`;
-  });
-});
+//     moon.style.transform = `translateY(${parallaxValue}px)`;
+//   });
+// });
 
 

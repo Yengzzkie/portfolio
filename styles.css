@@ -31,7 +31,7 @@ body.light {
   background-size: cover;
   height: 100vh;
   overflow: hidden;
-  transition: background 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 
   & .content {
     position: relative;
@@ -165,10 +165,6 @@ body.light {
     }
   }
 
-  & .show.sun {
-    right: 20%;
-  }
-
   & button {
     z-index: 9;
   }
@@ -189,6 +185,7 @@ body.light {
     animation: twinkle 2s infinite;
   }
 }
+
 /* END OF HERO SECTION */
 
 /* LIGHT THEME FOR HERO */
@@ -197,7 +194,7 @@ body.light {
   background-position: top center;
   background-size: cover;
   color: #2196f3;
-  transition: background 1.5s ease-in-out;
+  transition: all 1s ease-in-out;
 
   h2 {
     color: #00569b;
