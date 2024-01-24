@@ -325,7 +325,7 @@ body.light {
     overflow: hidden;
 
     & img {
-        width: 100%;
+      min-width: 400px; 
     }
 
     & h1 {
@@ -335,27 +335,42 @@ body.light {
       margin-bottom: 20px;
       z-index: 2;
     }
-
+/* 
     & .pseudo-h1 {
       position: absolute;
       top: 5%;
       left: 0;
-      color: rgba(43, 42, 42, 0.507);
+      color: rgba(43, 42, 42, 0.32);
       font-size: 10rem;
       font-family: "Water Brush", sans-serif;
-    }
+    } */
 
     & .about-group1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 50px;
     }
   }
+
+  & .container::before {
+      content: "About Me";
+      position: absolute;
+      color: rgba(43, 42, 42, 0.32);
+      font-size: 12rem;
+      font-family: "Water Brush", sans-serif;
+      top: 0;
+      left: 0;
+    }
 }
-/* START OF HERO SECTION */
 
 .about.light {
   background: linear-gradient(to bottom, #fff, #50cde9);
 }
+/* END OF ABOUT SECTION */
 
+
+/* START OF CONTACT SECTION */
 .contact {
   background: #272727;
   display: flex;
@@ -397,7 +412,10 @@ body.light {
 .contact.light {
   background: #50cde9;
 }
+/* END OF CONTACT SECTION */
 
+
+/* START OF PROJECT SECTION */
 .projects {
   background: linear-gradient(to top, black, #272727);
   display: flex;
@@ -418,36 +436,89 @@ body.light {
     padding: 30px;
     overflow: hidden;
 
-    & img {
-        width: 100%;
-    }
+    & .project-wrapper {
+      display: flex;
 
-    & h1 {
-      position: relative;
-      font-family: "Water Brush", sans-serif;
-      font-size: 6rem;
-      margin-bottom: 20px;
-      z-index: 2;
-    }
+      & img {
+        min-width: 400px;
+      }
+      
+      & .project-group1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
 
-    & .pseudo-h1 {
+      & h1 {
+        position: relative;
+        font-family: "Water Brush", sans-serif;
+        font-size: 6rem;
+        margin-bottom: 20px;
+        z-index: 2;
+      }
+    }
+  }
+    /* & .pseudo-h1 {
       position: absolute;
       top: 5%;
       left: 5%;
-      color: rgba(43, 42, 42, 0.507);
+      color: rgba(43, 42, 42, 0.32);
       font-size: 10rem;
       font-family: "Water Brush", sans-serif;
-    }
-
-    & .about-group1 {
-      padding: 50px;
-    }
+    } */
+    
   }
+
+  & .container::before {
+      content: "Projects";
+      position: absolute;
+      color: rgba(43, 42, 42, 0.32);
+      font-size: 12rem;
+      font-family: "Water Brush", sans-serif;
+      top: 0;
+      right: 20%;
+    }
 }
 
 .projects.light {
   background: linear-gradient(to bottom, #50cde9, #fff);
 }
+/* END OF PROJECT SECTION */
+
+
+/* START OF BLOG SECTION */
+.blog {
+  background: #272727;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  padding: 50px 80px;
+
+  & .group1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    padding: 0 80px;
+
+    & h1 {
+      font-family: "Water Brush", sans-serif;
+      font-size: 6rem;
+      margin: 20px;
+    }
+
+    & p {
+      text-align: center;
+    }
+  }
+}
+
+.blog.light {
+  background: linear-gradient(to bottom, #fff, #50cde9);
+}
+/* END OF BLOG SECTION */
 
 /* ANIMATIONS */
 
@@ -496,14 +567,26 @@ body.light {
 }
 
 @media only screen and (max-width: 1024px) {
-    .hero .content h2 {
-        font-size: 2rem;
-    }
 
-    .hero .plane {
-      width: 20vw;
-      transform: rotate(336deg);
-    }
+  .about .container h1,
+  .contact .group1 h1,
+  .projects .container .project-group1 h1,
+  .blog .group1 h1 {
+    font-size: 5rem;
+  }
+
+  .hero .content h2 {
+      font-size: 2rem;
+  }
+
+  .hero .plane {
+    width: 20vw;
+    transform: rotate(336deg);
+  }
+
+  .contact .group2 .icon {
+    width: 50px;
+  }
 
 }
 
