@@ -17,7 +17,7 @@ body {
   height: 100%;
   perspective: 1px;
   transform-style: preserve-3d;
-  background: rgb(32, 32, 32);
+  background: rgb(32, 32, 32) ;
   color: white;
 
   a {
@@ -41,6 +41,15 @@ body.light {
   transform-style: inherit;
   transition: all 1.5s ease-in-out;
   z-index: -1;
+
+  & .cloud {
+    position: absolute;
+    opacity: .7;
+    width: 100%;
+    right: -200%;
+    transform: translateZ(-1px) scale(1.5);
+    animation: moveToLeft 25s linear infinite;
+  }
 
   & .plane {
     position: absolute;
@@ -275,18 +284,6 @@ body.light {
 
 }
 
-
-@keyframes fly {
-  from {
-    left: -100px;
-  }
-  to {
-    top: 10%;
-    left: 110%;
-  }
-}
-
-
 .hero.light::before {
   content: "";
   position: absolute;
@@ -478,6 +475,25 @@ body.light {
     }
 }
 
+@keyframes fly {
+  from {
+    left: -100px;
+  }
+  to {
+    top: 10%;
+    left: 110%;
+  }
+}
+
+
+@keyframes moveToLeft {
+  from {
+    right: -200%;
+  }
+  to {
+    right: 200%;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
     .hero .content h2 {
@@ -490,3 +506,4 @@ body.light {
     }
 
 }
+
