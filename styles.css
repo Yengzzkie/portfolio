@@ -250,6 +250,10 @@ body.light {
   color: #2196f3;
   transition: all .7s ease-in-out;
 
+  & .stars {
+    display: none;
+  }
+
   & h3 {
     color: rgb(101 101 101);
   }
