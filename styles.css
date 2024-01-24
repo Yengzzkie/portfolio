@@ -52,7 +52,7 @@ body.light {
 
     & h1 {
       font-family: "Poppins", sans-serif;
-      font-size: calc(3rem + 3vw);
+      font-size: calc(2.5rem + 3vw);
       margin: 10px;
       text-align: center;
     }
@@ -454,7 +454,7 @@ body.light {
 
 @media only screen and (max-width: 1024px) {
     .hero .content h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
 }
