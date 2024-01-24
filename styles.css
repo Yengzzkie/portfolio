@@ -42,6 +42,14 @@ body.light {
   transition: all 1.5s ease-in-out;
   z-index: -1;
 
+  & .plane {
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    transform: rotate(-10deg);
+    animation: fly 15s linear infinite;
+  }
+
   & .content {
     position: relative;
     display: flex;
@@ -263,6 +271,18 @@ body.light {
 
 }
 
+
+@keyframes fly {
+  from {
+    left: -100px;
+  }
+  to {
+    top: 10%;
+    left: 110%;
+  }
+}
+
+
 .hero.light::before {
   content: "";
   position: absolute;
@@ -458,6 +478,11 @@ body.light {
 @media only screen and (max-width: 1024px) {
     .hero .content h2 {
         font-size: 2rem;
+    }
+
+    .hero .plane {
+      width: 20vw;
+      transform: rotate(336deg);
     }
 
 }
