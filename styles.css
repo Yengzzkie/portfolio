@@ -24,6 +24,10 @@ body {
     color: inherit;
     text-decoration: none;
   }
+
+  & p {
+        font-size: 1.3rem;
+      }
 }
 /* use #50cde9 for light background */
 body.light {
@@ -331,25 +335,17 @@ body.light {
     & h1 {
       position: relative;
       font-family: "Water Brush", sans-serif;
-      font-size: 6rem;
+      font-size: 8rem;
       margin-bottom: 20px;
       z-index: 2;
+      color: #fff;
+      text-align: center;
     }
-/* 
-    & .pseudo-h1 {
-      position: absolute;
-      top: 5%;
-      left: 0;
-      color: rgba(43, 42, 42, 0.32);
-      font-size: 10rem;
-      font-family: "Water Brush", sans-serif;
-    } */
 
     & .about-group1 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 50px;
     }
   }
 
@@ -357,7 +353,7 @@ body.light {
       content: "About Me";
       position: absolute;
       color: rgba(43, 42, 42, 0.32);
-      font-size: 12rem;
+      font-size: 13rem;
       font-family: "Water Brush", sans-serif;
       top: 0;
       left: 0;
@@ -365,7 +361,12 @@ body.light {
 }
 
 .about.light {
-  background: linear-gradient(to bottom, #fff, #50cde9);
+  background: linear-gradient(to bottom, #fff, #50cde9, #50cde9);
+
+  & .container {
+    color: #565656;
+  }
+  
 }
 /* END OF ABOUT SECTION */
 
@@ -384,13 +385,13 @@ body.light {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
     padding: 0 80px;
 
     & h1 {
       font-family: "Water Brush", sans-serif;
       font-size: 6rem;
       margin: 20px;
+      text-align: center;
     }
 
     & p {
@@ -417,7 +418,7 @@ body.light {
 
 /* START OF PROJECT SECTION */
 .projects {
-  background: linear-gradient(to top, black, #272727);
+  background: linear-gradient(to top, #141414, #272727);
   display: flex;
   width: 100vw;
   max-width: 100%;
@@ -430,6 +431,7 @@ body.light {
     width: calc(100vw - 15%);
     max-width: 100%;
     height: 500px;
+    color: #fff;
     border: 2px solid #3b3b3b;
     box-shadow: -5px 5px 10px black;
     margin: auto;
@@ -448,25 +450,18 @@ body.light {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 50px;
 
       & h1 {
         position: relative;
         font-family: "Water Brush", sans-serif;
-        font-size: 6rem;
+        font-size: 8rem;
         margin-bottom: 20px;
+        color: #fff;
+        text-align: center;
         z-index: 2;
       }
     }
   }
-    /* & .pseudo-h1 {
-      position: absolute;
-      top: 5%;
-      left: 5%;
-      color: rgba(43, 42, 42, 0.32);
-      font-size: 10rem;
-      font-family: "Water Brush", sans-serif;
-    } */
     
   }
 
@@ -474,22 +469,26 @@ body.light {
       content: "Projects";
       position: absolute;
       color: rgba(43, 42, 42, 0.32);
-      font-size: 12rem;
+      font-size: 13rem;
       font-family: "Water Brush", sans-serif;
       top: 0;
-      right: 20%;
+      left: 0;
     }
 }
 
 .projects.light {
-  background: linear-gradient(to bottom, #50cde9, #fff);
+  background: linear-gradient(to bottom, #50cde9, #50cde9, #fff);
+
+  & .container {
+    color: #565656;
+  }
 }
 /* END OF PROJECT SECTION */
 
 
 /* START OF BLOG SECTION */
 .blog {
-  background: #272727;
+  background: linear-gradient(to bottom, #141414, #272727, #272727);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,6 +506,7 @@ body.light {
       font-family: "Water Brush", sans-serif;
       font-size: 6rem;
       margin: 20px;
+      text-align: center;
     }
 
     & p {
@@ -516,7 +516,7 @@ body.light {
 }
 
 .blog.light {
-  background: linear-gradient(to bottom, #fff, #50cde9);
+  background: linear-gradient(to bottom, #fff, #50cde9, #50cde9);
 }
 /* END OF BLOG SECTION */
 
@@ -570,7 +570,7 @@ body.light {
 
   .about .container h1,
   .contact .group1 h1,
-  .projects .container .project-group1 h1,
+  .projects .container .project-wrapper .project-group1 h1,
   .blog .group1 h1 {
     font-size: 5rem;
   }

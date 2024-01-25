@@ -47,12 +47,14 @@ sunMoonBtn.addEventListener('click', function() {
     const about = document.querySelector('.about');
     const contact = document.querySelector(".contact");
     const projects = document.querySelector(".projects");
+    const blog = document.querySelector(".blog");
 
     moon.classList.toggle('sun');
     hero.classList.toggle("light");
     about.classList.toggle("light");
     contact.classList.toggle("light");
     projects.classList.toggle("light");
+    blog.classList.toggle("light");
 })
 
 
