@@ -352,7 +352,7 @@ body.light {
   & .container::before {
       content: "About Me";
       position: absolute;
-      color: rgba(43, 42, 42, 0.32);
+      color: rgba(43, 42, 42, 0.22);
       font-size: 13rem;
       font-family: "Water Brush", sans-serif;
       top: 0;
@@ -468,7 +468,7 @@ body.light {
   & .container::before {
       content: "Projects";
       position: absolute;
-      color: rgba(43, 42, 42, 0.32);
+      color: rgba(43, 42, 42, 0.22);
       font-size: 13rem;
       font-family: "Water Brush", sans-serif;
       top: 0;
