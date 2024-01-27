@@ -342,10 +342,6 @@ body {
     padding: 30px;
     overflow: hidden;
 
-    & img {
-      min-width: 400px;
-    }
-
     & h1 {
       position: relative;
       font-family: "Water Brush", sans-serif;
@@ -367,10 +363,11 @@ body {
     content: "About Me";
     position: absolute;
     color: rgba(43, 42, 42, 0.22);
-    font-size: 13rem;
+    font-size: 10.2rem;
     font-family: "Water Brush", sans-serif;
-    top: 0;
-    left: 0;
+    top: 5%;
+    left: 45%;
+    transform: translateX(-50%);
   }
 }
 
@@ -437,6 +434,7 @@ body {
   & .container {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 90vw;
@@ -447,23 +445,10 @@ body {
     border-radius: 15px;
     box-shadow: -5px 5px 10px black;
     margin: auto;
-    padding: 30px;
+    padding: 30px 20px;
     overflow: hidden;
 
-    & .project-wrapper {
-      display: flex;
-
-      & img {
-        min-width: 400px;
-      }
-
-      & .project-group1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        & h1 {
+    & h1 {
           position: relative;
           font-family: "Water Brush", sans-serif;
           font-size: 8rem;
@@ -472,6 +457,23 @@ body {
           text-align: center;
           z-index: 2;
         }
+
+    & .project-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+      grid-template-rows: 1fr 1fr;
+      gap: 15px;
+      width: 100%;
+
+
+      & .project-item {
+        background: linear-gradient(90deg, #018aa8, #00BCD4);
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 15px 30px;
+        z-index: 2;
       }
     }
   }
@@ -480,10 +482,11 @@ body {
     content: "Projects";
     position: absolute;
     color: rgba(43, 42, 42, 0.22);
-    font-size: 13rem;
+    font-size: 12rem;
     font-family: "Water Brush", sans-serif;
-    top: 0;
-    left: 0;
+    top: 5%;
+    left: 45%;
+    transform: translateX(-50%);
   }
 }
 
@@ -585,7 +588,7 @@ body {
 @media only screen and (max-width: 1024px) {
   .about .container h1,
   .contact .group1 h1,
-  .projects .container .project-wrapper .project-group1 h1,
+  .projects .container h1,
   .blog .group1 h1 {
     font-size: 5rem;
   }
