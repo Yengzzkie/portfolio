@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #ecf0f3;
+  --font-color: #6e6e6e;
+  --color-dark-shadow: #d3dae7;
+  --color-white: #fff;
+  --box-shadow: 1rem 1rem 1rem var(--color-dark-shadow),
+  -1rem -1rem 1rem var(--color-white);
+}
+
 html {
   overflow: hidden;
   height: 100%;
@@ -17,7 +26,7 @@ body {
   height: 100%;
   perspective: 1px;
   transform-style: preserve-3d;
-  background: #1e314f;
+  background: var(--bg-color);
   color: white;
 
 
@@ -69,7 +78,6 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: auto;
 
     & h1 {
@@ -335,9 +343,8 @@ body {
     width: 90vw;
     max-width: 100%;
     height: auto;
-    border: 2px solid #3b3b3b;
-    border-radius: 15px;
-    box-shadow: -5px 5px 10px black;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
     margin: auto;
     padding: 30px;
     overflow: hidden;
@@ -348,7 +355,6 @@ body {
       font-size: 8rem;
       margin-bottom: 20px;
       z-index: 2;
-      color: #fff;
       text-align: center;
     }
 
@@ -356,23 +362,24 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-  }
+    
+      & p {
+        box-shadow: var(--box-shadow);
+        border-radius: 20px;
+        padding: 15px 50px;
+        transition: box-shadow .5s;
+      }
 
-  & .container::before {
-    content: "About Me";
-    position: absolute;
-    color: rgba(43, 42, 42, 0.22);
-    font-size: 10.2rem;
-    font-family: "Water Brush", sans-serif;
-    top: 5%;
-    left: 45%;
-    transform: translateX(-50%);
+      & p:hover {
+        box-shadow: 0 0 transparent;
+      }
+    }
   }
 }
 
 .about.light {
-  background: linear-gradient(to bottom, #fff, #50cde9, #50cde9);
+  background: var(--bg-color);
+  color: var(--font-color);
 
   & .container {
     color: #565656;
@@ -408,19 +415,38 @@ body {
     }
   }
 
-  & .group2 {
+  & .icon-wrapper {
     display: flex;
     margin: 50px;
 
-    .icon {
-      width: 70px;
-      margin-right: 20px;
+    & li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-color);
+      box-shadow: var(--box-shadow);
+      list-style: none;
+      border-radius: 50%;
+      margin-right: 25px;
+      width: 3.5rem;
+      height: 3.5rem;
+      transition: box-shadow .5s;
+    }
+
+    & li:hover {
+      box-shadow: 0 0 transparent;
+    }
+
+    .icon { 
+      color: var(--font-color);
+      font-size: 1.8rem;
     }
   }
 }
 
 .contact.light {
-  background: #50cde9;
+  background: var(--bg-color);
+  color: var(--font-color);
 }
 /* END OF CONTACT SECTION */
 
@@ -441,9 +467,8 @@ body {
     max-width: 100%;
     height: auto;
     color: #fff;
-    border: 2px solid #3b3b3b;
-    border-radius: 15px;
-    box-shadow: -5px 5px 10px black;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
     margin: auto;
     padding: 30px 20px;
     overflow: hidden;
@@ -453,7 +478,6 @@ body {
           font-family: "Water Brush", sans-serif;
           font-size: 8rem;
           margin-bottom: 20px;
-          color: #fff;
           text-align: center;
           z-index: 2;
         }
@@ -462,36 +486,31 @@ body {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
       grid-template-rows: 1fr 1fr;
-      gap: 15px;
+      gap: 30px;
       width: 100%;
 
 
       & .project-item {
-        background: linear-gradient(90deg, #018aa8, #00BCD4);
         width: 100%;
         height: 100%;
-        border: 1px solid black;
-        border-radius: 15px;
+        border: 1px solid rgba(138, 138, 138, 0.659);
+        box-shadow: var(--box-shadow);
+        border-radius: 20px;
         padding: 15px 30px;
-        z-index: 2;
+        transition: all .5s;
+      }
+
+      & .project-item:hover {
+        border: none;
+        box-shadow: 0 0 transparent;
       }
     }
-  }
-
-  & .container::before {
-    content: "Projects";
-    position: absolute;
-    color: rgba(43, 42, 42, 0.22);
-    font-size: 12rem;
-    font-family: "Water Brush", sans-serif;
-    top: 5%;
-    left: 45%;
-    transform: translateX(-50%);
   }
 }
 
 .projects.light {
-  background: #50cde9;
+  background: var(--bg-color);
+  color: var(--font-color);
 
   & .container {
     color: #565656;
@@ -529,7 +548,8 @@ body {
 }
 
 .blog.light {
-  background: #50cde9;
+  background: var(--bg-color);
+  color: var(--font-color);
 }
 /* END OF BLOG SECTION */
 
