@@ -570,6 +570,10 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+  .container:hover {
+    box-shadow: none;
+  }
+
   .about .container h1,
   .contact .group1 h1,
   .projects .container h1,
