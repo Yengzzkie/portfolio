@@ -438,7 +438,7 @@ body {
     padding: 15px;
   }
 
-  .container:hover {
+  .hero.container, .container:hover {
     box-shadow: none;
   }
 
@@ -522,6 +522,7 @@ body {
   transition: 0.4s;
   border-radius: 34px;
   box-shadow: inset 1px 1px 6px black;
+  pointer-events: none;
 }
 
 /* Rounded slider when untoggled */
