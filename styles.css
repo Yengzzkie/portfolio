@@ -13,6 +13,7 @@
   --color-white: #fff;
   --box-shadow: 1rem 1rem 1rem var(--color-dark-shadow),
   -1rem -1rem 1rem var(--color-white);
+  --inset: inset 0 0 1.5rem #d3dae7;
 }
 
 html {
@@ -267,7 +268,7 @@ body {
   }
 
   & h2 {
-    color: #00569b;
+    color: rgb(129 129 129);
     transition: 0.8s ease-in-out;
 
     &::before, &::after {
@@ -289,7 +290,9 @@ body {
   display: flex;
   width: 100vw;
   max-width: 100%;
-  padding-top: 100px;
+  padding: 40px;
+  margin-top: 30px;
+  box-shadow: var(--inset);
   z-index: 1;
 
   & .container {
@@ -413,6 +416,8 @@ body {
   display: flex;
   width: 100vw;
   max-width: 100%;
+  padding: 40px;
+  box-shadow: var(--inset);
 
   & .container {
     position: relative;
