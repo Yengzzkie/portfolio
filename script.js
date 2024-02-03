@@ -21,36 +21,10 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 1000);
 });
 
-// STARS GENERATOR
-document.addEventListener("DOMContentLoaded", function () {
-  const starsContainer = document.querySelector(".stars");
+// THEME TOGGLE
 
-  for (let i = 0; i < 100; i++) {
-    const star = document.createElement("div");
-    star.className = "star-dot";
-    star.style.left = Math.random() * 100 + "vw";
-    star.style.top = Math.random() * 100 + "vh";
-    starsContainer.appendChild(star);
-  }
-});
+const switchTheme = document.getElementById("darkModeToggle");
 
-// MOON AND SUN TOGGLE
-
-const sunMoonBtn = document.querySelector(".toggle-theme");
-
-sunMoonBtn.addEventListener("click", function () {
-  const moon = document.querySelector(".moon");
-  const hero = document.querySelector(".hero");
-  const about = document.querySelector(".about");
-  const contact = document.querySelector(".contact");
-  const projects = document.querySelector(".projects");
-  const blog = document.querySelector(".blog");
-
-  moon.classList.toggle("sun");
-  hero.classList.toggle("light");
-  about.classList.toggle("light");
-  contact.classList.toggle("light");
-  projects.classList.toggle("light");
-  blog.classList.toggle("light");
-});
-
+switchTheme.addEventListener('click', function() {
+ document.body.classList.toggle('dark');
+})
