@@ -8,12 +8,15 @@
 
 :root {
   --bg-color: #ecf0f3;
+  --dark-bg-color: #474747;
+  --dark-box-shadow: 1rem 1rem 1rem #0c0909, -1rem -1rem 1rem #3c3b3b;
   --font-color: #6e6e6e;
   --color-dark-shadow: #d3dae7;
   --color-white: #fff;
   --box-shadow: 1rem 1rem 1rem var(--color-dark-shadow),
     -1rem -1rem 1rem var(--color-white);
   --inset: inset 0 0 1rem #d3dae7;
+
 }
 
 html {
