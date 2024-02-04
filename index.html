@@ -9,7 +9,26 @@
 </head>
 
 <body>
-  <section class="hero light container">
+
+  <nav class="menu">
+    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+    <label class="menu-open-button" for="menu-open">
+     <span class="lines line-1"></span>
+     <span class="lines line-2"></span>
+     <span class="lines line-3"></span>
+   </label>
+ 
+    <a href="#hero" class="menu-item blue" data-tooltip="Intro"> <i class="fa fa-address-card"></i> </a>
+    <a href="#about" class="menu-item green" data-tooltip="About Me"> <i class="fa fa-person"></i> </a>
+    <a href="#contact" class="menu-item red" data-tooltip="Contact"> <i class="fa fa-phone"></i> </a>
+    <a href="#projects" class="menu-item purple" data-tooltip="Projects"> <i class="fa fa-folder"></i> </a>
+    <a href="#blog" class="menu-item orange" data-tooltip="Blog"> <i class="fa fa-file-pen"></i> </a>
+    <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i> </a>
+ </nav>
+
+
+
+  <section class="hero light container" id="hero">
 
     <label class="switch">
       <i class="fa-solid fa-sun sunny"></i>
@@ -36,27 +55,31 @@
 
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
       <div class="about-group1">
         <h1>About Me</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ullam, nostrum exercitationem neque excepturi commodi autem? Earum nobis hic quia neque quam libero! Perferendis voluptates quo aperiam ipsam accusamus totam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quae fugiat dignissimos nemo. Laboriosam est quisquam dolorum, blanditiis debitis sequi error, provident placeat repellat doloribus totam distinctio autem unde quam?</p>
+        <p>Hi there, I'm Manuel, a front end web developer creating visually stunning and engaging websites and web applications. With a strong command of HTML, CSS, and JavaScript, I specialize in MERN tech stack.
+          <br><br>
+          I have a deep passion for creating seamless and intuitive user interfaces that enhance the user experience and drive business growth. I am comfortable collaborating with designers and back end developers to deliver top-notch digital products that meet client requirements and exceed user expectations.
+          
+          When I'm not coding, you can find me playing video games 🎮, watching movies 📺, or spending time with my family ❤️.</p>
       </div>
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="group1">
       <h1>Get in touch</h1>
       <p>If you would like to reach out you can find me on any of the following platforms or drop me a message directly at <b>gatchalian.manuel@gmail.com</b></p>
     </div>
 
     <ul class="icon-wrapper">
-      <li><a href="#"><i class="fa-brands fa-facebook icon"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-square-instagram icon"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-linkedin icon"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-github icon"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-discord icon"></i></a></li>
+      <li><a href="https://www.facebook.com/yengzzkie" target="_blank"><i class="fa-brands fa-facebook icon"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-square-instagram icon" target="_blank"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/manuel-gatchalian/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a></li>
+      <li><a href="https://github.com/Yengzzkie" target="_blank"><i class="fa-brands fa-github icon"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-discord icon" target="_blank"></i></a></li>
     </ul>
   </section>
 
@@ -129,7 +152,7 @@
     </div>
   </section>
 
-  <section class="blog light">
+  <section class="blog" id="blog">
     <div class="group1">
       <h1>Blog</h1>
       <p>If you would like to get in touch you can find me on any of the following platforms or drop me a message directly at <b>gatchalian.manuel@gmail.com</b></p>
