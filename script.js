@@ -8,9 +8,14 @@ function runText() {
 }
 
 function typeText(text, textContainer, delay) {
+  const googleColors = ['#4285F4', '#0F9D58', '#F4B400', '#DB4437']; // Google colors: Blue, Green, Yellow, Red
+
   for (let i = 0; i < text.length; i++) {
     setTimeout(() => {
-      textContainer.textContent += text.charAt(i);
+      const span = document.createElement('span');
+      span.textContent = text.charAt(i);
+      span.style.color = googleColors[i % googleColors.length]; // Assign a Google color to each letter
+      textContainer.appendChild(span);
     }, delay * i);
   }
 }
@@ -22,7 +27,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // THEME TOGGLE
-
 const switchTheme = document.getElementById("darkModeToggle");
 
 switchTheme.addEventListener('click', function() {
