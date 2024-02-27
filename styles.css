@@ -523,7 +523,8 @@ body.dark {
   }
 
   .switch {
-    top: 0 !important;
+    top: 2% !important;
+    right: 10% !important;
   }
 
   .about,
@@ -556,7 +557,8 @@ body.dark {
   }
 
   .hero .content h2 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    padding: 20px 25px;
   }
 
   .hero .content .icon-wrapper {
@@ -591,6 +593,7 @@ body.dark {
 
   .menu {
     top: 3% !important;
+    left: 1% !important;
   }
 
   .menu-open-button {
