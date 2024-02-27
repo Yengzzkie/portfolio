@@ -44,7 +44,7 @@ body.dark {
   color: var(--color-white);
 
   .hero {
-    box-shadow: var(--dark-box-shadow);
+    /* box-shadow: var(--dark-box-shadow); */
 
     .content {
       h3, h2 {
@@ -149,12 +149,12 @@ body.dark {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 95vh;
-  width: 90vw;
-  margin-top: 20px;
-  border-radius: 50px;
+  height: 100vh;
+  width: 100vw;
+  /* margin-top: 20px; */
+  /* border-radius: 50px; */
   color: inherit;
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
   transition: all 0.7s;
 
   & .content {
@@ -676,11 +676,11 @@ input:checked + .slider:before {
 /* NAV BUTTON */
 .menu-item,
 .menu-open-button {
-   background: #FFFFFF;
+   background: var(--bg-color);
    border-radius: 100%;
    width: 70px;
    height: 70px;
-   margin-left: -5px;
+   margin-left: -3px;
    position: absolute;
    color: #FFFFFF;
    text-align: center;
@@ -747,7 +747,7 @@ input:checked + .slider:before {
    margin: auto;
    position: fixed;
    top: 5%;
-   /* left: 3%; */
+   left: 2.5%;
    width: 50px;
    height: 50px;
    text-align: center;
@@ -807,12 +807,14 @@ input:checked + .slider:before {
    -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
    cursor: pointer;
-   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   box-shadow: var(--box-shadow);
+   transition: box-shadow .5s;
 }
 
 .menu-open-button:hover {
-   -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
-   transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+   /* -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+   transform: scale(1.2, 1.2) translate3d(0, 0, 0); */
+   box-shadow: none;
 }
 
 .menu-open:checked + .menu-open-button {
