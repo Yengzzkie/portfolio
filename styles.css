@@ -43,6 +43,20 @@ body.dark {
   background: var(--dark-bg-color);
   color: var(--color-white);
 
+  .menu-open-button {
+    background: var(--dark-bg-color);
+    box-shadow: var(--dark-box-shadow);
+    transition: box-shadow .5s;
+
+    & span {
+      background: #fff;
+    }
+  }
+
+  .menu-open-button:hover {
+    box-shadow: none;
+  }
+
   .hero {
     /* box-shadow: var(--dark-box-shadow); */
 
