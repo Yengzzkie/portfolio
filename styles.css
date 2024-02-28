@@ -141,18 +141,18 @@ body.dark {
     transition: box-shadow 0.3s;
   }
   
-  .container:hover {
+  /* .container:hover {
     box-shadow: var(--dark-box-shadow);
-  }
+  } */
 }
 
 .container {
   transition: box-shadow 0.3s;
 }
 
-.container:hover {
+/* .container:hover {
   box-shadow: var(--box-shadow);
-}
+} */
 
 /* START OF HERO SECTION */
 .hero {
@@ -213,7 +213,7 @@ body.dark {
       margin: 50px;
       padding: 20px;
       gap: 20px;
-      width: 100%;
+      max-width: 700px;
 
       & li {
         display: flex;
@@ -388,7 +388,7 @@ body.dark {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
       grid-template-rows: 1fr 1fr;
-      gap: 30px;
+      gap: 4rem;
       width: 100%;
 
       & .project-item {
