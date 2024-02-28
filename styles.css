@@ -210,7 +210,7 @@ body.dark {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 50px;
+      margin: 30px;
       padding: 20px;
       gap: 20px;
       max-width: 700px;
@@ -223,8 +223,8 @@ body.dark {
         list-style: none;
         border-radius: 50%;
         margin: 10px;
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 4rem;
+        height: 4rem;
         transition: box-shadow 0.5s;
       }
 
@@ -234,7 +234,7 @@ body.dark {
 
       .icon {
         color: inherit;
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
     }
   }
@@ -557,7 +557,7 @@ body.dark {
   }
 
   .hero .content h2 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     padding: 20px 25px;
   }
 
@@ -569,6 +569,10 @@ body.dark {
   .hero .content .icon-wrapper li {
     width: 2.5rem;
     height: 2.5rem;
+  }
+
+  .hero .content .icon-wrapper .icon {
+    font-size: 1.5rem;
   }
 
   .contact .icon-wrapper li {
@@ -1003,4 +1007,8 @@ input:checked + .slider:before {
 .menu-item:hover::before {
   opacity: 1;
   visibility: visible;
+}
+
+.black-svg {
+  filter: invert(1);
 }
