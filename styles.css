@@ -632,14 +632,14 @@ body.dark {
   pointer-events:visible;
 }
 
-.sunny {
+.night {
   position: absolute;
   top: 50%;
   left: -50%;
   transform: translateY(-50%);
 }
 
-.night {
+.sunny {
   position: absolute;
   top: 50%;
   right: -40%;
