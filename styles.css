@@ -409,12 +409,20 @@ body.dark {
         }
 
         & .img-wrapper {
+          position: relative;
           align-self: center;
           width: 100%;
 
           & img {
             width: 100%;
             object-fit: cover;
+          }
+
+          .mobile {
+            position: absolute;
+            width: 100px;
+            right: 0;
+            bottom: 0;
           }
         }
 
